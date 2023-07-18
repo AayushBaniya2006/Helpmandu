@@ -1,4 +1,7 @@
+// ignore_for_file: unused_field
+
 import 'package:flutter/material.dart';
+import 'Main.dart';
 import 'ServicesPage.dart';
 import 'accountPage.dart';
 
@@ -48,7 +51,7 @@ class _HomepageState extends State<Homepage> {
             ),
             body: const TabBarView(
               children: [
-                Center(child: Text('Tab 1 Content')),
+                Main(),
                 Services(),
                 AccountPage(),
               ],

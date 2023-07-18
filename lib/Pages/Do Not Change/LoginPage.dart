@@ -40,6 +40,7 @@ class _LoginPageState extends State<LoginPage> {
     showError(e.code);
   }
   }
+
   
   void showError(String Texts){
     showDialog(context: context, builder: (context){
@@ -68,11 +69,15 @@ class _LoginPageState extends State<LoginPage> {
         
           //Logo will be inserted here 
             const SizedBox(height: 20),
-            const Icon(
-              Icons.construction,
-              color: Colors.black,
-              size: 200.0,
+            
+            Image.asset(
+              "lib/images/GreyLogo.png",
+              fit: BoxFit.cover,
+              height: 200,
+              width: double.infinity,
             ),
+          
+
           // Company Name will be here, it will have to be updated in the future
             const Text("Helpmandu "),
             const SizedBox(height: 60),
@@ -176,10 +181,6 @@ class _LoginPageState extends State<LoginPage> {
           const SizedBox(height: 10),
           const SizedBox(height: 10),
 
-
-          
-          
-        
           ]
           ),
         ),

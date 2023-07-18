@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'booking.dart';
 
 class ServiceDesc extends StatelessWidget {
   final String name;
   final IconData icon;
-  final int price;
   final String desc;
   final String img;
 
@@ -11,7 +11,6 @@ class ServiceDesc extends StatelessWidget {
     Key? key,
     required this.name,
     required this.icon,
-    required this.price,
     required this.desc,
     required this.img,
   }) : super(key: key);
@@ -53,13 +52,7 @@ class ServiceDesc extends StatelessWidget {
             children: [
               _buildImageWidget(),
               const SizedBox(height: 24),
-              Text(
-                'Price: ${price.toString()} NPR',
-                style: const TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+              
               const SizedBox(height: 16),
               const Text(
                 'Description:',
@@ -74,14 +67,38 @@ class ServiceDesc extends StatelessWidget {
                 style: const TextStyle(fontSize: 16),
                 textAlign: TextAlign.center,
               ),
-              const SizedBox(height: 150),
-        const ElevatedButton(
-          onPressed: null,
-          child: Text('Call Now'),
-          ),
-
-
-
+              const SizedBox(height: 70),
+              Row(
+                children: [
+                  Expanded(
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const BookPage(),
+                          ),
+                        );
+                      },
+                      child: const Text('Book Now'),
+                    ),
+                  ),
+                  const SizedBox(width: 16),
+                  Expanded(
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const BookPage(),
+                          ),
+                        );
+                      },
+                      child: const Text('Book Now'),
+                    ),
+                  ),
+                ],
+              ),
               const SizedBox(height: 24),
             ],
           ),
@@ -89,22 +106,21 @@ class ServiceDesc extends StatelessWidget {
       ),
     );
   }
-  
-   void showError(BuildContext context, String text) {
-  showDialog(
-    context: context,
-    builder: (context) {
-      return AlertDialog(
-        backgroundColor: Colors.red,
-        title: Text(
-          text,
-          style: const TextStyle(
-            color: Colors.white,
-          ),
-        ),
-      );
-    },
-  );
-}
 
+  void showError(BuildContext context, String text) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          backgroundColor: Colors.red,
+          title: Text(
+            text,
+            style: const TextStyle(
+              color: Colors.white,
+            ),
+          ),
+        );
+      },
+    );
+  }
 }

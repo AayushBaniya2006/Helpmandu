@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:helpmandu/Pages/HomePage.dart';
 import 'Pages/Do Not Change/auth_page.dart';
 import 'firebase_options.dart';
 

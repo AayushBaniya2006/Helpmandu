@@ -101,7 +101,8 @@ class _AccountPageState extends State<AccountPage> {
                             ElevatedButton(
                               onPressed: saveName,
                               style: ElevatedButton.styleFrom(
-                                foregroundColor: Colors.white, backgroundColor: Colors.blue,
+                                foregroundColor: Colors.white,
+                                backgroundColor: Colors.blue,
                                 shape: const RoundedRectangleBorder(
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(8.0)),
@@ -171,9 +172,8 @@ class _AccountPageState extends State<AccountPage> {
                             user?.email ?? 'N/A',
                             style: const TextStyle(
                               fontSize: 16,
-                              color: Colors.blue
-                              ),
-                            
+                              color: Colors.blue,
+                            ),
                           ),
                         ],
                       ),
@@ -183,7 +183,6 @@ class _AccountPageState extends State<AccountPage> {
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
-                          
                         ),
                       ),
                       const SizedBox(height: 4),
@@ -194,7 +193,7 @@ class _AccountPageState extends State<AccountPage> {
                             '512-309-5417',
                             style: TextStyle(
                               fontSize: 16,
-                              color: Colors.blue
+                              color: Colors.blue,
                             ),
                           ),
                         ],
@@ -203,22 +202,26 @@ class _AccountPageState extends State<AccountPage> {
                   ),
                 ),
               ),
-              const SizedBox(height: 200),
-              ElevatedButton(
-                onPressed: signOut,
-                style: ElevatedButton.styleFrom(
-                  foregroundColor: Colors.white, backgroundColor: Colors.red,
-                  shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(8.0)),
+              const SizedBox(height: 20),
+              SizedBox(
+                width: 150, // Set the desired width for the button
+                child: ElevatedButton(
+                  onPressed: signOut,
+                  style: ElevatedButton.styleFrom(
+                    foregroundColor: Colors.white,
+                    backgroundColor: Colors.red,
+                    shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                    ),
                   ),
-                ),
-                child: const Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Icon(Icons.logout),
-                    SizedBox(width: 8),
-                    Text('Sign Out'),
-                  ],
+                  child: const Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Icon(Icons.logout),
+                      SizedBox(width: 8),
+                      Text('Sign Out'),
+                    ],
+                  ),
                 ),
               ),
             ],

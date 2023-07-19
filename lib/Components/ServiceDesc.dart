@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'booking.dart';
+import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ServiceDesc extends StatelessWidget {
   final String name;
@@ -7,7 +10,7 @@ class ServiceDesc extends StatelessWidget {
   final String desc;
   final String img;
 
-  const ServiceDesc({
+  ServiceDesc({
     Key? key,
     required this.name,
     required this.icon,
@@ -17,6 +20,18 @@ class ServiceDesc extends StatelessWidget {
 
   bool _isNetworkImage() {
     return img.startsWith('http') || img.startsWith('https');
+  }
+
+  //9841868601 Business
+
+  Uri dialnumber=Uri(scheme: 'tel', path: "+9979851140485");
+
+  callNumber()async{
+    await launchUrl(dialnumber);
+  }
+
+  directcall() async{
+    await FlutterPhoneDirectCaller.callNumber("15124095461");
   }
 
   Widget _buildImageWidget() {
@@ -73,14 +88,9 @@ class ServiceDesc extends StatelessWidget {
                   Expanded(
                     child: ElevatedButton(
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const BookPage(),
-                          ),
-                        );
+                        callNumber();
                       },
-                      child: const Text('Book Now'),
+                      child: const Text('Call Now'),
                     ),
                   ),
                   const SizedBox(width: 16),

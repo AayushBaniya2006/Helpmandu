@@ -39,7 +39,8 @@ dependencies:
   firebase_auth: ^4.7.0
   firebase_core_dart: ^1.0.1
   google_sign_in: ^6.1.4
-  flutter_sms: ^2.3.3
+  flutter_phone_direct_caller: ^2.1.1
+  url_launcher: ^6.1.12
   
 
 dev_dependencies:

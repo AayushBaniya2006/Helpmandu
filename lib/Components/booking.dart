@@ -1,8 +1,6 @@
-// ignore_for_file: non_constant_identifier_names, avoid_print
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_sms/flutter_sms.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class BookPage extends StatefulWidget {
   const BookPage({Key? key});
@@ -12,8 +10,10 @@ class BookPage extends StatefulWidget {
 }
 
 class _BookPageState extends State<BookPage> {
-  final TextEditingController _textFieldControllerDescription = TextEditingController();
-  final TextEditingController _textFieldControllerNumber = TextEditingController();
+  final TextEditingController _textFieldControllerDescription =
+      TextEditingController();
+  final TextEditingController _textFieldControllerNumber =
+      TextEditingController();
 
   void _showDatePicker(context) {
     showDatePicker(
@@ -23,20 +23,9 @@ class _BookPageState extends State<BookPage> {
       lastDate: DateTime(2030),
     );
   }
-  void _showTimePicker(context) {
-    showTimePicker(
-      context: context,
-      initialTime: TimeOfDay.now()
-    );
-  }
 
-  void sending_SMS(String msg, List<String> listRecipients) async {
-    try {
-      String sendResult = await sendSMS(message: msg, recipients: listRecipients);
-      print(sendResult);
-    } catch (error) {
-      print(error.toString());
-    }
+  void _showTimePicker(context) {
+    showTimePicker(context: context, initialTime: TimeOfDay.now());
   }
 
   @override
@@ -44,6 +33,18 @@ class _BookPageState extends State<BookPage> {
     _textFieldControllerDescription.dispose();
     _textFieldControllerNumber.dispose();
     super.dispose();
+  }
+  final Uri smsLaunchUri = Uri(
+    scheme: 'sms',
+    path: '0118 999 881 999 119 7253',
+    queryParameters: <String, String>{
+      'body': Uri.encodeComponent('Example Subject & Symbols are allowed!'),
+    },
+);
+
+  SMS(String phoneNumber, String message) async {
+    Uri dialnumber = Uri(scheme: 'sms', path: '5124095461', query: "HELLO");
+    await launchUrl(smsLaunchUri);
   }
 
   @override
@@ -156,7 +157,8 @@ class _BookPageState extends State<BookPage> {
               const SizedBox(height: 30),
               ElevatedButton(
                 onPressed: () {
-                  sending_SMS('Hello, this is a test message', ['1234512345', '456785678']);
+                 
+                  SMS('5124095461', 'gel');
                 },
                 style: ElevatedButton.styleFrom(
                   primary: Colors.green,
@@ -176,12 +178,11 @@ class _BookPageState extends State<BookPage> {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  
                 ),
-                
               ),
               const SizedBox(height: 30),
-              const Text("Disclamer: These dates may not be avaliabe and are not final but we do try our best ")
+              const Text(
+                  "Disclaimer: These dates may not be available and are not final, but we do try our best."),
             ],
           ),
         ),

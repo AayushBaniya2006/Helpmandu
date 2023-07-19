@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import '../Components/ServiceDesc.dart';
 import '../Components/build_grid.dart';
-import 'ServicesPage.dart';
 
 class Main extends StatelessWidget {
   const Main({Key? key});

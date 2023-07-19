@@ -157,40 +157,40 @@ class _AccountPageState extends State<AccountPage> {
                   padding: const EdgeInsets.all(16.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
+                    children: const [
+                      Text(
                         'Business Email:',
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      const SizedBox(height: 4),
+                      SizedBox(height: 4),
                       Row(
                         children: [
                           Text(
-                            user?.email ?? 'N/A',
-                            style: const TextStyle(
+                            "aviconst2077@gmail.com",
+                            style: TextStyle(
                               fontSize: 16,
                               color: Colors.blue,
                             ),
                           ),
                         ],
                       ),
-                      const SizedBox(height: 20),
-                      const Text(
+                      SizedBox(height: 20),
+                      Text(
                         'Business Phone Number:',
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      const SizedBox(height: 4),
+                      SizedBox(height: 4),
                       // ignore: prefer_const_constructors
                       Row(
-                        children: const [
+                        children: [
                           Text(
-                            '512-309-5417',
+                            '9841-868601',
                             style: TextStyle(
                               fontSize: 16,
                               color: Colors.blue,

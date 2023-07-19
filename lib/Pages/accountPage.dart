@@ -151,13 +151,13 @@ class _AccountPageState extends State<AccountPage> {
                 ),
               ),
               const SizedBox(height: 20),
-              Card(
+              const Card(
                 elevation: 4,
                 child: Padding(
-                  padding: const EdgeInsets.all(16.0),
+                  padding: EdgeInsets.all(16.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
+                    children: [
                       Text(
                         'Business Email:',
                         style: TextStyle(
@@ -179,7 +179,7 @@ class _AccountPageState extends State<AccountPage> {
                       ),
                       SizedBox(height: 20),
                       Text(
-                        'Business Phone Number:',
+                        'Business Phone Numbers:',
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
@@ -196,8 +196,17 @@ class _AccountPageState extends State<AccountPage> {
                               color: Colors.blue,
                             ),
                           ),
+                          SizedBox(height: 4),
+                          
                         ],
                       ),
+                      Text(
+                            '9851-140485',
+                            style: TextStyle(
+                              fontSize: 16,
+                              color: Colors.blue,
+                            ),
+                          ),
                     ],
                   ),
                 ),

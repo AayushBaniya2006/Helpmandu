@@ -88,7 +88,7 @@ class ServiceDesc extends StatelessWidget {
                   Expanded(
                     child: ElevatedButton(
                       onPressed: () {
-                        callNumber();
+                        directcall();
                       },
                       child: const Text('Call Now'),
                     ),
@@ -96,17 +96,19 @@ class ServiceDesc extends StatelessWidget {
                   const SizedBox(width: 16),
                   Expanded(
                     child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const BookPage(),
-                          ),
-                        );
-                      },
-                      child: const Text('Book Now'),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => BookPage(name: name), // Pass the name to BookPage
+                      ),
+                    );
+                  },
+                  child: const Text('Book Now'),
+                ),
+
                     ),
-                  ),
+                  
                 ],
               ),
               const SizedBox(height: 24),

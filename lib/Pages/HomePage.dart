@@ -1,9 +1,10 @@
 // ignore_for_file: unused_field
 
 import 'package:flutter/material.dart';
-import 'Main.dart';
-import 'ServicesPage.dart';
-import 'accountPage.dart';
+import 'MainPage.dart';
+import '../Pages/ServicesPage.dart';
+import '../Pages/accountPage.dart';
+
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -51,7 +52,7 @@ class _HomepageState extends State<Homepage> {
             ),
             body: const TabBarView(
               children: [
-                Main(),
+                MainPage(),
                 Services(),
                 AccountPage(),
               ],
@@ -62,3 +63,5 @@ class _HomepageState extends State<Homepage> {
     );
   }
 }
+
+

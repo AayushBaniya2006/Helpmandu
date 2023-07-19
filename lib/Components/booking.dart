@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class BookPage extends StatefulWidget {
-  const BookPage({Key? key});
+  final String name;
+
+  const BookPage({Key? key, required this.name}) : super(key: key);
 
   @override
   State<BookPage> createState() => _BookPageState();
@@ -12,39 +13,54 @@ class BookPage extends StatefulWidget {
 class _BookPageState extends State<BookPage> {
   final TextEditingController _textFieldControllerDescription =
       TextEditingController();
-  final TextEditingController _textFieldControllerNumber =
-      TextEditingController();
 
-  void _showDatePicker(context) {
-    showDatePicker(
+  DateTime? selectedDate;
+  TimeOfDay? selectedTime;
+
+  void _showDatePicker(context) async {
+    DateTime? pickedDate = await showDatePicker(
       context: context,
       initialDate: DateTime.now(),
       firstDate: DateTime.now(),
       lastDate: DateTime(2030),
     );
+
+    if (pickedDate != null && pickedDate != selectedDate) {
+      setState(() {
+        selectedDate = pickedDate;
+      });
+    }
   }
 
-  void _showTimePicker(context) {
-    showTimePicker(context: context, initialTime: TimeOfDay.now());
+  void _showTimePicker(context) async {
+    TimeOfDay? pickedTime = await showTimePicker(
+      context: context,
+      initialTime: TimeOfDay.now(),
+    );
+
+    if (pickedTime != null && pickedTime != selectedTime) {
+      setState(() {
+        selectedTime = pickedTime;
+      });
+    }
   }
 
   @override
   void dispose() {
     _textFieldControllerDescription.dispose();
-    _textFieldControllerNumber.dispose();
     super.dispose();
   }
-  final Uri smsLaunchUri = Uri(
-    scheme: 'sms',
-    path: '0118 999 881 999 119 7253',
-    queryParameters: <String, String>{
-      'body': Uri.encodeComponent('Example Subject & Symbols are allowed!'),
-    },
-);
 
   SMS(String phoneNumber, String message) async {
-    Uri dialnumber = Uri(scheme: 'sms', path: '5124095461', query: "HELLO");
-    await launchUrl(smsLaunchUri);
+    Uri smsLaunchUri = Uri(
+      scheme: 'sms',
+      path: phoneNumber,
+      queryParameters: <String, String>{
+        'body': message,
+      },
+    );
+
+    await launchUrl(smsLaunchUri); // Use launch instead of launchUrl
   }
 
   @override
@@ -135,30 +151,18 @@ class _BookPageState extends State<BookPage> {
                 ),
               ),
               const SizedBox(height: 20),
-              const Text(
-                'Phone Number',
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const SizedBox(height: 10),
-              TextField(
-                controller: _textFieldControllerNumber,
-                keyboardType: TextInputType.phone,
-                inputFormatters: <TextInputFormatter>[
-                  FilteringTextInputFormatter.allow(RegExp(r'[0-9]')),
-                ],
-                decoration: const InputDecoration(
-                  labelText: 'Enter your phone number',
-                  border: OutlineInputBorder(),
-                ),
-              ),
-              const SizedBox(height: 30),
               ElevatedButton(
                 onPressed: () {
-                 
-                  SMS('5124095461', 'gel');
+                  String description = _textFieldControllerDescription.text;
+                  String time = selectedTime != null ? selectedTime!.format(context) : 'Not selected';
+                  String date = selectedDate != null ? selectedDate!.toString().split(' ')[0] : 'Not selected';
+
+                  String message = 'Appointment: ${widget.name}\n'
+                      'Date: $date\n'
+                      'Time: $time\n'
+                      'Description: $description';
+
+                  SMS('5124095461', message);
                 },
                 style: ElevatedButton.styleFrom(
                   primary: Colors.green,
@@ -182,7 +186,8 @@ class _BookPageState extends State<BookPage> {
               ),
               const SizedBox(height: 30),
               const Text(
-                  "Disclaimer: These dates may not be available and are not final, but we do try our best."),
+                "Disclaimer: These dates may not be available and are not final, but we do try our best.",
+              ),
             ],
           ),
         ),

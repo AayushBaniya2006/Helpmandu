@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'dart:io' show Platform;
+
+
 
 class BookPage extends StatefulWidget {
   final String name;
@@ -45,6 +49,9 @@ class _BookPageState extends State<BookPage> {
     }
   }
 
+
+
+
   @override
   void dispose() {
     _textFieldControllerDescription.dispose();
@@ -52,16 +59,33 @@ class _BookPageState extends State<BookPage> {
   }
 
   SMS(String phoneNumber, String message) async {
-    Uri smsLaunchUri = Uri(
-      scheme: 'sms',
-      path: phoneNumber,
-      queryParameters: <String, String>{
-        'body': message,
-      },
-    );
 
-    await launchUrl(smsLaunchUri); // Use launch instead of launchUrl
+
+      
+      if(Platform.isIOS){
+         Uri smsLaunchUri = Uri(
+      scheme: 'sms',
+      path: '+9979851140485',
+      
+    );
+    await launchUrl(smsLaunchUri);
+      }
+      
+      if(Platform.isAndroid){
+ 
+        Uri smsLaunchUris = Uri(
+          scheme: 'sms',
+          path: "+9979851140485",
+          queryParameters: <String, String>{
+            'body': message,
+          },
+        );
+
+    await launchUrl(smsLaunchUris);
+      } 
+      
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -83,7 +107,7 @@ class _BookPageState extends State<BookPage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const Text(
-                'Select a Date',
+                'Select a Date & Time',
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
@@ -156,6 +180,46 @@ class _BookPageState extends State<BookPage> {
                   String description = _textFieldControllerDescription.text;
                   String time = selectedTime != null ? selectedTime!.format(context) : 'Not selected';
                   String date = selectedDate != null ? selectedDate!.toString().split(' ')[0] : 'Not selected';
+                  
+                  String message = 'Appointment: ${widget.name}\n'
+                      'Date: $date\n'
+                      'Time: $time\n'
+                      'Description: $description';
+                  Clipboard.setData(ClipboardData(text: message));
+
+                 
+                },
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.blue,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+                
+                child: const Padding(
+                  padding: EdgeInsets.symmetric(
+                    vertical: 0,
+                    horizontal: 0,
+                  ),
+                  
+                  child: Text(
+                    'Copy Appointment Details',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 20),
+              const Text('Please copy the appointment here then paste the text after pressing Book Now.'),
+              const SizedBox(height: 180),
+              
+              ElevatedButton(
+                onPressed: () {
+                  String description = _textFieldControllerDescription.text;
+                  String time = selectedTime != null ? selectedTime!.format(context) : 'Not selected';
+                  String date = selectedDate != null ? selectedDate!.toString().split(' ')[0] : 'Not selected';
 
                   String message = 'Appointment: ${widget.name}\n'
                       'Date: $date\n'
@@ -170,11 +234,13 @@ class _BookPageState extends State<BookPage> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                 ),
+                
                 child: const Padding(
                   padding: EdgeInsets.symmetric(
                     vertical: 10,
                     horizontal: 30,
                   ),
+                  
                   child: Text(
                     'Book Now',
                     style: TextStyle(

@@ -88,27 +88,8 @@ class MainPage extends StatelessWidget {
           ),
 
           // Add the box with a circular image and text
-          Container(
-            padding: const EdgeInsets.all(16.0),
-            child: const Row(
-              children: [
-                CircleAvatar(
-                  radius: 50,
-                  backgroundImage: AssetImage('lib/images/your_image_asset_path_here.jpg'), // Replace with your image asset path
-                ),
-                SizedBox(width: 16.0),
-                Expanded(
-                  flex: 2,
-                  child: Text(
-                    'Your text goes here. You can add more details about your business or any other information you want to display.',
-                    style: TextStyle(
-                      fontSize: 16,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
+         
+           
         ],
       ),
     );

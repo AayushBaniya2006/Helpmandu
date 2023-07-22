@@ -44,39 +44,41 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCegjjJt0oMgB2ygWr2PXSRLmOqfRJXUVQ',
-    appId: '1:573259900980:web:64c5467c65253b7d06c261',
-    messagingSenderId: '573259900980',
-    projectId: 'helpmandu',
-    authDomain: 'helpmandu.firebaseapp.com',
-    storageBucket: 'helpmandu.appspot.com',
+    apiKey: 'AIzaSyA6Cp4RugGCevyexxtFDsXvgLrW9J8U1F4',
+    appId: '1:121129729497:web:463cdd7ac824df35deadc8',
+    messagingSenderId: '121129729497',
+    projectId: 'construction-c0bfe',
+    authDomain: 'construction-c0bfe.firebaseapp.com',
+    storageBucket: 'construction-c0bfe.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyB54Os0_2-nmvrafKJ6NZVqzow9GomT0zo',
-    appId: '1:573259900980:android:1a14b045092b3e3606c261',
-    messagingSenderId: '573259900980',
-    projectId: 'helpmandu',
-    storageBucket: 'helpmandu.appspot.com',
+    apiKey: 'AIzaSyARS6fWMLbyTgKrk-rcaF5Dbgkz71XuQXU',
+    appId: '1:121129729497:android:eb252bd5bce7a7e1deadc8',
+    messagingSenderId: '121129729497',
+    projectId: 'construction-c0bfe',
+    storageBucket: 'construction-c0bfe.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCmQjfNUZzVI_mx5zGrlbQ4NQaTRkRodZQ',
-    appId: '1:573259900980:ios:1c4c05c79408e99506c261',
-    messagingSenderId: '573259900980',
-    projectId: 'helpmandu',
-    storageBucket: 'helpmandu.appspot.com',
-    iosClientId: '573259900980-gms0b9sb5gvgalnrd1sk7nl7fq079mb3.apps.googleusercontent.com',
+    apiKey: 'AIzaSyDcEzTgVvupDd5HvJte0J8Sr8tc3mcjEGw',
+    appId: '1:121129729497:ios:07c96fb427252796deadc8',
+    messagingSenderId: '121129729497',
+    projectId: 'construction-c0bfe',
+    storageBucket: 'construction-c0bfe.appspot.com',
+    androidClientId: '121129729497-angt2dt3nv3qrdn6spqtcbqclks7a1n0.apps.googleusercontent.com',
+    iosClientId: '121129729497-3b7aipob5dl7mkj132f8hacjj1f7166m.apps.googleusercontent.com',
     iosBundleId: 'com.example.helpmandu',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCmQjfNUZzVI_mx5zGrlbQ4NQaTRkRodZQ',
-    appId: '1:573259900980:ios:a818c68269c03a5206c261',
-    messagingSenderId: '573259900980',
-    projectId: 'helpmandu',
-    storageBucket: 'helpmandu.appspot.com',
-    iosClientId: '573259900980-09lu1sfm3oh6qreed54shjk1hn84h0vs.apps.googleusercontent.com',
+    apiKey: 'AIzaSyDcEzTgVvupDd5HvJte0J8Sr8tc3mcjEGw',
+    appId: '1:121129729497:ios:478f85d60e422c1bdeadc8',
+    messagingSenderId: '121129729497',
+    projectId: 'construction-c0bfe',
+    storageBucket: 'construction-c0bfe.appspot.com',
+    androidClientId: '121129729497-angt2dt3nv3qrdn6spqtcbqclks7a1n0.apps.googleusercontent.com',
+    iosClientId: '121129729497-55ucru4cp2loku8dkgisc9qv4ovinsi3.apps.googleusercontent.com',
     iosBundleId: 'com.example.helpmandu.RunnerTests',
   );
 }

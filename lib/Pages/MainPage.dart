@@ -86,7 +86,10 @@ class MainPage extends StatelessWidget {
           const Text(
             'Welcome to Helpmandu! We offer a wide range of professional services to enhance your living spaces. Our experienced team is dedicated to delivering high-quality results and exceeding your expectations. From repairs to remodeling, we are here to transform your home. Choose us for reliable, personalized solutions that cater to your needs. Experience the difference we can make in your living environment.',
           ),
-
+          const SizedBox(height: 8.0),
+          const Text(
+            '(Kathmandu Exclusive)',
+          ),
           // Add the box with a circular image and text
          
            

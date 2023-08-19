@@ -33,18 +33,21 @@ class Services extends StatelessWidget {
               icon1: Icons.format_paint,
               icon2: Icons.plumbing,
               icon3: Icons.pest_control_rodent_outlined,
-              desc1: "Painting- If you're looking for exceptional painting services, look no further. We provide meticulous attention to detail, innovative designs, and a blend of modern artistry for your colorful journey. Let our team of professional painters transform your home and bring your vision to life. We use premium quality paints, tools, and techniques to deliver stunning results that exceed your expectations. From interior walls to exterior surfaces, we cater to all your painting needs.",
-              desc2: "Plumbing- Trust our plumbing services for all your plumbing needs. Our team of experienced plumbers offers comprehensive solutions to ensure proper water flow, drainage, and maintenance in your home. From installation of new fixtures to repairing leaks and clogs, we provide reliable and efficient plumbing services. We use the latest tools and technology to diagnose and resolve plumbing issues, ensuring long-lasting functionality and customer satisfaction.",
-              desc3: "Pest Control- Protect your home from pests with our reliable pest control services. Our expert technicians are well-versed in dealing with a wide range of pests, from insects to rodents. We employ effective and environmentally friendly methods to eliminate pests and ensure a pest-free living environment. Our thorough inspection and targeted treatment approach ensure the complete eradication of pests while minimizing any impact on your home and the surrounding ecosystem.",
+              desc1:
+                  "Painting- If you're looking for exceptional painting services, look no further. We provide meticulous attention to detail, innovative designs, and a blend of modern artistry for your colorful journey. Let our team of professional painters transform your home and bring your vision to life. We use premium quality paints, tools, and techniques to deliver stunning results that exceed your expectations. From interior walls to exterior surfaces, we cater to all your painting needs.",
+              desc2:
+                  "Plumbing- Trust our plumbing services for all your plumbing needs. Our team of experienced plumbers offers comprehensive solutions to ensure proper water flow, drainage, and maintenance in your home. From installation of new fixtures to repairing leaks and clogs, we provide reliable and efficient plumbing services. We use the latest tools and technology to diagnose and resolve plumbing issues, ensuring long-lasting functionality and customer satisfaction.",
+              desc3:
+                  "Pest Control- Protect your home from pests with our reliable pest control services. Our expert technicians are well-versed in dealing with a wide range of pests, from insects to rodents. We employ effective and environmentally friendly methods to eliminate pests and ensure a pest-free living environment. Our thorough inspection and targeted treatment approach ensure the complete eradication of pests while minimizing any impact on your home and the surrounding ecosystem.",
               img1: "lib/images/Painting.jpeg",
               img2: "lib/images/Plumbing.jpeg",
               img3: "lib/images/PestControl.jpeg",
             ),
-            SizedBox(height: 12),
+            SizedBox(height: 30),
             buildGrid(
               name1: "Electrician",
-              name2: "UPVC Roofing Installation",
-              name3: "Toughened Glass Installation",
+              name2: "UPVC Roofing",
+              name3: "Toughened Glass",
               icon1: Icons.electric_meter_outlined,
               icon2: Icons.roofing_sharp,
               icon3: Icons.window_rounded,
@@ -61,7 +64,7 @@ class Services extends StatelessWidget {
             SizedBox(height: 12),
             buildGrid(
               name1: "Aluminum Installation",
-              name2: "Smart Home Appliances Installation",
+              name2: "Smart Home",
               name3: "Home Finishing",
               icon1: Icons.door_front_door_rounded,
               icon2: Icons.roofing_sharp,
@@ -144,7 +147,7 @@ class Services extends StatelessWidget {
                   "Hair Dresser- Get a stunning hair transformation with our skilled hairdressers. We offer expert hairdressing services, including cuts, colors, and styles, to leave you looking and feeling fabulous. Trust our experienced team for personalized attention and tailored solutions that suit your unique style. Whether you're seeking a trendy haircut, a glamorous updo, or a complete makeover, we deliver exceptional results. Our hairdressers stay updated with the latest trends and techniques to offer you a wide range of options and ensure your satisfaction with every visit.",
               desc3:
                   "Modular Kitchen- Revamp your kitchen with a sleek and efficient modular solution. Our customizable options, including cabinets, countertops, and storage solutions, offer both style and functionality. Experience the convenience of a modern kitchen with our expert installations. Our team works closely with you to design a modular kitchen that maximizes space, improves workflow, and reflects your culinary preferences. From selecting high-quality materials to optimizing storage solutions and incorporating cutting-edge kitchen appliances, we create a kitchen that meets your unique needs and enhances your cooking experience.",
-             //change
+              //change
               img1: "lib/images/Railing.jpeg",
               img2: "lib/images/Hair_Dresser.jpeg",
               img3: "lib/images/Modular Kitchen.jpeg",

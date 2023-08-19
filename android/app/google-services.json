@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:573259900980:android:1a14b045092b3e3606c261",
         "android_client_info": {
-          "package_name": "com.example.helpmandu"
+          "package_name": "com.aviConst.helpmandu"
         }
       },
       "oauth_client": [
@@ -34,7 +34,7 @@
               "client_id": "573259900980-09lu1sfm3oh6qreed54shjk1hn84h0vs.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.example.helpmandu.RunnerTests"
+                "bundle_id": "com.aviConst.helpmandu.RunnerTests"
               }
             }
           ]

@@ -1,4 +1,4 @@
-package com.example.helpmandu
+package com.aviConst.helpmandu
 
 import io.flutter.embedding.android.FlutterActivity
 

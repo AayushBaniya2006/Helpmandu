@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "573259900980",
+    "project_id": "helpmandu",
+    "storage_bucket": "helpmandu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:573259900980:android:1a14b045092b3e3606c261",
+        "android_client_info": {
+          "package_name": "com.aviConst.helpmandu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "573259900980-dnt1d771n1f729qi9ktjmmpccnctltvl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB54Os0_2-nmvrafKJ6NZVqzow9GomT0zo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "573259900980-dnt1d771n1f729qi9ktjmmpccnctltvl.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "573259900980-09lu1sfm3oh6qreed54shjk1hn84h0vs.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.aviConst.helpmandu.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

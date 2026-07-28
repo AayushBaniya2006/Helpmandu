@@ -11,11 +11,13 @@
 [![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebase.google.com)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-[![Status](https://img.shields.io/badge/Status-Development_Paused-orange?style=for-the-badge)]()
+[![Status](https://img.shields.io/badge/Status-Retired%20%2F%20Archived-red?style=for-the-badge)]()
 [![Year](https://img.shields.io/badge/Built-2023-blue?style=for-the-badge)]()
 [![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20iOS%20%7C%20Web-lightgrey?style=for-the-badge)]()
 
 ---
+
+> **Status: Retired / Archived.** Built ~2023, no longer in active development or maintained. Kept public as a portfolio reference.
 
 **Connect with skilled professionals for all your home improvement needs.**
 From plumbing to painting, electrical work to interior design — book trusted service providers in just a few taps.
@@ -184,7 +186,7 @@ lib/
 
 ## Development
 
-> **700+ commits** across multiple development cycles went into building Helpmandu before the project was paused in 2023. The codebase has since been consolidated into this clean, production-ready archive.
+> Helpmandu was built through multiple development cycles before the project was paused in 2023. The codebase has since been consolidated into this clean, archived snapshot.
 
 ---
 

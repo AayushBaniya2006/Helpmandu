@@ -186,7 +186,7 @@ lib/
 
 ## Development
 
-> Helpmandu was built through multiple development cycles before the project was paused in 2023. The codebase has since been consolidated into this clean, archived snapshot.
+> Helpmandu was built over 700+ commits before the project was paused in 2023. That development history was later consolidated into this clean, archived snapshot, so the public repo shows a single commit.
 
 ---
 
